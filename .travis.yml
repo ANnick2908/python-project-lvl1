@@ -12,5 +12,5 @@ before_install:
 install:
         - make install
 
-lint:
+script:
         - make lint
