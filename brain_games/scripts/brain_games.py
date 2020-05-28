@@ -1,4 +1,4 @@
-"""The main script of programm brain_games."""
+"""The greeting script of programm brain_games."""
 
 from brain_games.cli import welcome_user
 
