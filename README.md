@@ -11,7 +11,10 @@ Travis CI Status:
 [![Build Status](https://travis-ci.com/ANnick2908/python-project-lvl1.svg?branch=master)](https://travis-ci.com/ANnick2908/python-project-lvl1)
 
 Asciinema for brain-even:
-[![asciicast](https://asciinema.org/a/dcwAUf2kh0AZZQMBS2l8AKaWg.svg)](https://asciinema.org/a/dcwAUf2kh0AZZQMBS2l8AKaWg)
+[![asciicast](https://asciinema.org/a/XxgO4PwdUVA1FSOrHayLvOK50.svg)](https://asciinema.org/a/XxgO4PwdUVA1FSOrHayLvOK50)
 
 Asciinema for brain-calc:
-[![asciicast](https://asciinema.org/a/xJOCivKXB9EIohEQEjFo6abzQ.svg)](https://asciinema.org/a/xJOCivKXB9EIohEQEjFo6abzQ)
+[![asciicast](https://asciinema.org/a/5PQlKi8UPemqwlW4aeoBE4cUl.svg)](https://asciinema.org/a/5PQlKi8UPemqwlW4aeoBE4cUl)
+
+Asciinema for brain-gcd:
+[![asciicast](https://asciinema.org/a/dYb79RzMM92EihLQOpMv9xpOd.svg)](https://asciinema.org/a/dYb79RzMM92EihLQOpMv9xpOd)

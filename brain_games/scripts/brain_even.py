@@ -43,10 +43,13 @@ def generate_questions():
 
 def main():
     """Start the script."""
+    print()  # noqa: WPS421
     greeting()
     instruction()
+    print()  # noqa: WPS421
     name = welcome_user()
     questions = generate_questions()
+    print()  # noqa: WPS421
     logic(name, questions, check_even)
 
 

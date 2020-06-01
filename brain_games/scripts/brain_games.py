@@ -11,6 +11,7 @@ def greeting():
 def main():
     """Start the package on call."""
     greeting()
+    print()  # noqa: WPS421
     welcome_user()
 
 
