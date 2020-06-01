@@ -10,5 +10,8 @@ Test Coverage Badge:
 Travis CI Status:
 [![Build Status](https://travis-ci.com/ANnick2908/python-project-lvl1.svg?branch=master)](https://travis-ci.com/ANnick2908/python-project-lvl1)
 
-Asciinema:
+Asciinema for brain-even:
 [![asciicast](https://asciinema.org/a/dcwAUf2kh0AZZQMBS2l8AKaWg.svg)](https://asciinema.org/a/dcwAUf2kh0AZZQMBS2l8AKaWg)
+
+Asciinema for brain-calc:
+[![asciicast](https://asciinema.org/a/xJOCivKXB9EIohEQEjFo6abzQ.svg)](https://asciinema.org/a/xJOCivKXB9EIohEQEjFo6abzQ)

@@ -1,9 +1,8 @@
-"""The main script of programm brain_even."""
+"""The script of programm brain_even."""
 from random import randrange
 
-import prompt
-
 from brain_games.cli import welcome_user
+from brain_games.game_logic import logic
 from brain_games.scripts.brain_games import greeting
 
 
@@ -12,7 +11,7 @@ def instruction():
     print('Answer "yes" if number even otherwise answer "no".')  # noqa: WPS421
 
 
-def check(number):
+def check_even(number):
     """Check is number even or not.
 
     Args:
@@ -28,35 +27,27 @@ def check(number):
     return 'no'
 
 
-def contest(name):
-    """Ask user question is number even or not.
+def generate_questions():
+    """Generate numbers for questions.
 
-    Args:
-        name: username.
+    Returns:
+        questions: list of numbers.
 
     """
-    amount = 1
-    while amount < 4:
+    questions = []
+    for _ in range(3):  # noqa: WPS122
         number = randrange(0, 100)  # noqa: S311
-        print('Question: {n}'.format(n=number))  # noqa: WPS421
-        answer = prompt.string('Your answer: ')
-        correct_answer = check(number)
-        if answer == correct_answer:
-            print('Correct!')  # noqa: WPS421
-            amount += 1
-        else:
-            print("'yes' is wrong answer ;(. Correct answer was 'no'")  # noqa: WPS 421
-            break
-    if amount > 3:
-        print('Congratulations, {n}!'.format(n=name))  # noqa: WPS 421
+        questions.append(number)
+    return questions
 
 
 def main():
-    """Start the package on call."""
+    """Start the script."""
     greeting()
     instruction()
     name = welcome_user()
-    contest(name)
+    questions = generate_questions()
+    logic(name, questions, check_even)
 
 
 if __name__ == '__main__':

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ANnick2908_brain_games"
-version = "0.3.0"
+version = "0.4.0"
 description = "The program of the 1st project on Hexlet"
 authors = ["ANnick2908 <annick2908@gmail.com>"]
 packages = [
@@ -19,6 +19,7 @@ flake8-executable = "^2.0.3"
 [tool.poetry.scripts]
 brain-games = "brain_games.scripts.brain_games:main"
 brain-even = "brain_games.scripts.brain_even:main"
+brain-calc = "brain_games.scripts.brain_calc:main"
 [build-system]
 requires = ["poetry>=0.12"]
 build-backend = "poetry.masonry.api"
