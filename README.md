@@ -18,3 +18,6 @@ Asciinema for brain-calc:
 
 Asciinema for brain-gcd:
 [![asciicast](https://asciinema.org/a/dYb79RzMM92EihLQOpMv9xpOd.svg)](https://asciinema.org/a/dYb79RzMM92EihLQOpMv9xpOd)
+
+Asciinema for brain-progression:
+[![asciicast](https://asciinema.org/a/yx4ehVXhlv2Yto5hppz2SOg1U.svg)](https://asciinema.org/a/yx4ehVXhlv2Yto5hppz2SOg1U)
