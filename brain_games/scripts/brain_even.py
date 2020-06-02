@@ -8,7 +8,7 @@ from brain_games.scripts.brain_games import greeting
 
 def instruction():
     """Print instruction."""
-    print('Answer "yes" if number even otherwise answer "no".')  # noqa: WPS421
+    print('Answer "yes" if number even otherwise answer "no".')
 
 
 def check_even(number):
@@ -36,20 +36,17 @@ def generate_questions():
     """
     questions = []
     for _ in range(3):  # noqa: WPS122
-        number = randrange(0, 100)  # noqa: S311
+        number = randrange(0, 100)
         questions.append(number)
     return questions
 
 
 def main():
     """Start the script."""
-    print()  # noqa: WPS421
     greeting()
     instruction()
-    print()  # noqa: WPS421
     name = welcome_user()
     questions = generate_questions()
-    print()  # noqa: WPS421
     logic(name, questions, check_even)
 
 

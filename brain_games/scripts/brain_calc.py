@@ -8,7 +8,7 @@ from brain_games.scripts.brain_games import greeting
 
 def instruction():
     """Print instruction."""
-    print('What is the result of the expression?')  # noqa: WPS421
+    print('What is the result of the expression?')
 
 
 def check_calculation(expression):
@@ -40,26 +40,23 @@ def generate_questions():
     questions = []
     operators = ['+', '-', '*']
     for _ in range(3):  # noqa: WPS122
-        first_number = randrange(0, 100)  # noqa: S311
-        second_number = randrange(0, 100)  # noqa: S311
+        first_number = randrange(0, 100)
+        second_number = randrange(0, 100)
         expression = '{a} {o} {b}'.format(
             a=str(first_number),
-            o=choice(operators),  # noqa: S311
+            o=choice(operators),
             b=str(second_number),
-            )
+        )
         questions.append(expression)
     return questions
 
 
 def main():
     """Start the script."""
-    print()  # noqa: WPS421
     greeting()
     instruction()
-    print()  # noqa: WPS421
     name = welcome_user()
     questions = generate_questions()
-    print()  # noqa: WPS421
     logic(name, questions, check_calculation)
 
 

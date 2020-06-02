@@ -9,6 +9,6 @@ def welcome_user():
            name: username.
 
     """
-    name = prompt.string('May I have your name? ')
-    print('Hello, {n}!'.format(n=name))  # noqa: WPS421
+    name = prompt.string('\nMay I have your name? ')
+    print('Hello, {n}!\n'.format(n=name))
     return name

@@ -5,13 +5,12 @@ from brain_games.cli import welcome_user
 
 def greeting():
     """Print the first greeting after start."""
-    print('Welcome to the Brain Games!')  # noqa: WPS421
+    print('\nWelcome to the Brain Games!')
 
 
 def main():
     """Start the package on call."""
     greeting()
-    print()  # noqa: WPS421
     welcome_user()
 
 

@@ -6,11 +6,6 @@ from brain_games.game_logic import logic
 from brain_games.scripts.brain_games import greeting
 
 
-def instruction():
-    """Print instruction."""
-    print('Find the greatest common divisor of given numbers.')  # noqa: WPS421
-
-
 def gcd(fn, sn):
     """Calculate the greatest common divisor.
 
@@ -27,6 +22,11 @@ def gcd(fn, sn):
     if fn < sn:
         fn, sn = sn, fn
     return gcd(sn, (fn % sn))
+
+
+def instruction():
+    """Print instruction."""
+    print('Find the greatest common divisor of given numbers.')
 
 
 def check_gcd(expression):
@@ -54,25 +54,22 @@ def generate_questions():
     """
     questions = []
     for _ in range(3):  # noqa: WPS122
-        first_number = randrange(0, 100)  # noqa: S311
-        second_number = randrange(0, 100)  # noqa: S311
+        first_number = randrange(0, 100)
+        second_number = randrange(0, 100)
         expression = '{a} {b}'.format(
             a=str(first_number),
             b=str(second_number),
-            )
+        )
         questions.append(expression)
     return questions
 
 
 def main():
     """Start the script."""
-    print()  # noqa: WPS421
     greeting()
     instruction()
-    print()  # noqa: WPS421
     name = welcome_user()
     questions = generate_questions()
-    print()  # noqa: WPS421
     logic(name, questions, check_gcd)
 
 

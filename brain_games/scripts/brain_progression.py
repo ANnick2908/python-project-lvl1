@@ -8,7 +8,7 @@ from brain_games.scripts.brain_games import greeting
 
 def instruction():
     """Print instruction."""
-    print('What number is missing in the progression?')  # noqa: WPS421
+    print('What number is missing in the progression?')
 
 
 def check_progression(expression):
@@ -42,26 +42,23 @@ def generate_questions():
     questions = []
     progression_size = 10
     for _ in range(3):  # noqa: WPS122
-        delta = randrange(progression_size + 1)  # noqa: S311
-        step = randrange(1, progression_size + 1)  # noqa: S311
+        delta = randrange(progression_size + 1)
+        step = randrange(1, progression_size + 1)
         progression = [
-            (_ + delta) for _ in range(0, 1000, step)  # noqa: S311
-             ]
+            (_ + delta) for _ in range(0, 1000, step)
+        ]
         progression = progression[:progression_size]
-        progression[randrange(0, progression_size)] = '..'  # noqa: S311
+        progression[randrange(0, progression_size)] = '..'
         questions.append(' '.join(str(_) for _ in progression))
     return questions
 
 
 def main():
     """Start the script."""
-    print()  # noqa: WPS421
     greeting()
     instruction()
-    print()  # noqa: WPS421
     name = welcome_user()
     questions = generate_questions()
-    print()  # noqa: WPS421
     logic(name, questions, check_progression)
 
 
