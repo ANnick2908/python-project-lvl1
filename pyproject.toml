@@ -1,8 +1,18 @@
 [tool.poetry]
 name = "ANnick2908_brain_games"
-version = "0.7.2"
-description = "The program of the 1st project on Hexlet"
+version = "0.7.3"
+description = "The set of programm with simple math games"
 authors = ["ANnick2908 <annick2908@gmail.com>"]
+repository = "https://github.com/ANnick2908/python-project-lvl1"
+classifiers = [
+    'Development Status :: 4 - Beta',
+    'Environment :: Console',
+    'Intended Audience :: End Users/Desktop',
+    'License :: OSI Approved :: Python Software Foundation License',
+    'Operating System :: POSIX :: Linux',
+    'Programming Language :: Python',
+    'Topic :: Software Development :: Libraries :: Python Modules',
+]
 packages = [
     { include = "brain_games" },
    ]
@@ -17,12 +27,12 @@ flake8 = "^3.8.2"
 flake8-executable = "^2.0.3"
 
 [tool.poetry.scripts]
-brain-games = "brain_games.scripts.brain_games:main"
-brain-even = "brain_games.scripts.brain_even:main"
-brain-calc = "brain_games.scripts.brain_calc:main"
-brain-gcd = "brain_games.scripts.brain_gcd:main"
-brain-progression = "brain_games.scripts.brain_progression:main"
-brain-prime = "brain_games.scripts.brain_prime:main"
+brain-games = "brain_games.games.brain_games:main"
+brain-even = "brain_games.games.brain_even:main"
+brain-calc = "brain_games.games.brain_calc:main"
+brain-gcd = "brain_games.games.brain_gcd:main"
+brain-progression = "brain_games.games.brain_progression:main"
+brain-prime = "brain_games.games.brain_prime:main"
 [build-system]
 requires = ["poetry>=0.12"]
 build-backend = "poetry.masonry.api"

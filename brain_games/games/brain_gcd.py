@@ -1,33 +1,48 @@
-"""The script of programm brain_calc."""
-from random import choice, randrange
+"""The script of programm brain_gcd."""
+from random import randrange
 
 from brain_games.cli import welcome_user
 from brain_games.game_logic import logic
-from brain_games.scripts.brain_games import greeting
+from brain_games.games.brain_games import greeting
+
+
+def gcd(fn, sn):
+    """Calculate the greatest common divisor.
+
+    Args:
+        fn: the first number.
+        sn: the second number
+
+    Returns:
+        result: the greatest common divisor of numbers.
+
+    """
+    if sn == 0:
+        return fn
+    if fn < sn:
+        fn, sn = sn, fn
+    return gcd(sn, (fn % sn))
 
 
 def instruction():
     """Print instruction."""
-    print('What is the result of the expression?')
+    print('Find the greatest common divisor of given numbers.')
 
 
-def check_calculation(expression):
+def check_gcd(expression):
     """Calculate the result of the expression.
 
     Args:
         expression: full expression as a string.
 
     Returns:
-        result: the result of the expression.
+        result: the result of function 'gcd'.
 
     """
-    symbols = expression.split()
-    if symbols[1] == '+':
-        return str(int(symbols[0]) + int(symbols[2]))
-    elif symbols[1] == '-':
-        return str(int(symbols[0]) - int(symbols[2]))
-    elif symbols[1] == '*':
-        return str(int(symbols[0]) * int(symbols[2]))
+    numbers = expression.split()
+    first_number = int(numbers[0])
+    second_number = int(numbers[1])
+    return str(gcd(first_number, second_number))
 
 
 def generate_questions():
@@ -38,13 +53,11 @@ def generate_questions():
 
     """
     questions = []
-    operators = ['+', '-', '*']
     for _ in range(3):  # noqa: WPS122
         first_number = randrange(0, 100)
         second_number = randrange(0, 100)
-        expression = '{a} {o} {b}'.format(
+        expression = '{a} {b}'.format(
             a=str(first_number),
-            o=choice(operators),
             b=str(second_number),
         )
         questions.append(expression)
@@ -57,7 +70,7 @@ def main():
     instruction()
     name = welcome_user()
     questions = generate_questions()
-    logic(name, questions, check_calculation)
+    logic(name, questions, check_gcd)
 
 
 if __name__ == '__main__':

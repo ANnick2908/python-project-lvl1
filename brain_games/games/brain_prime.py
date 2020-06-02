@@ -3,7 +3,7 @@ from random import randrange
 
 from brain_games.cli import welcome_user
 from brain_games.game_logic import logic
-from brain_games.scripts.brain_games import greeting
+from brain_games.games.brain_games import greeting
 
 
 def isdivide(number, numbers):

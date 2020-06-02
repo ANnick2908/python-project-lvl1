@@ -1,1 +1,1 @@
-"""The main package of the programm-game brain_games."""
+"""The main package of the programm brain_games."""
