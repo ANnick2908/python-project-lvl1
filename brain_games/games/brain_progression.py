@@ -1,9 +1,7 @@
 """The script of programm brain_progression."""
 from random import randrange
 
-from brain_games.cli import welcome_user
 from brain_games.game_logic import logic
-from brain_games.games.brain_games import greeting
 
 
 def instruction():
@@ -32,8 +30,11 @@ def check_progression(expression):
     return str(hidden_element)
 
 
-def generate_questions():
+def generator(ROUNDS):
     """Generate progression for questions.
+
+    Args:
+        ROUNDS: amount of rounds in the contest.
 
     Returns:
         questions: list of progressions.
@@ -41,7 +42,7 @@ def generate_questions():
     """
     questions = []
     progression_size = 10
-    for _ in range(3):  # noqa: WPS122
+    for _ in range(ROUNDS):  # noqa: WPS122
         delta = randrange(progression_size + 1)
         step = randrange(1, progression_size + 1)
         progression = [
@@ -55,11 +56,7 @@ def generate_questions():
 
 def main():
     """Start the script."""
-    greeting()
-    instruction()
-    name = welcome_user()
-    questions = generate_questions()
-    logic(name, questions, check_progression)
+    logic(instruction, generator, check_progression)
 
 
 if __name__ == '__main__':

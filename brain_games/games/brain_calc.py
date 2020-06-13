@@ -1,9 +1,7 @@
 """The script of programm brain_calc."""
 from random import choice, randrange
 
-from brain_games.cli import welcome_user
 from brain_games.game_logic import logic
-from brain_games.games.brain_games import greeting
 
 
 def instruction():
@@ -30,8 +28,11 @@ def check_calculation(expression):
         return str(int(symbols[0]) * int(symbols[2]))
 
 
-def generate_questions():
+def generator(ROUNDS):
     """Generate numbers for questions.
+
+    Args:
+        ROUNDS: amount of rounds in the contest.
 
     Returns:
         questions: list of numbers.
@@ -39,7 +40,7 @@ def generate_questions():
     """
     questions = []
     operators = ['+', '-', '*']
-    for _ in range(3):  # noqa: WPS122
+    for _ in range(ROUNDS):  # noqa: WPS122
         first_number = randrange(0, 100)
         second_number = randrange(0, 100)
         expression = '{a} {o} {b}'.format(
@@ -53,11 +54,7 @@ def generate_questions():
 
 def main():
     """Start the script."""
-    greeting()
-    instruction()
-    name = welcome_user()
-    questions = generate_questions()
-    logic(name, questions, check_calculation)
+    logic(instruction, generator, check_calculation)
 
 
 if __name__ == '__main__':

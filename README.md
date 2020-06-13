@@ -2,10 +2,10 @@
 The first project on Hexlet called "Brain Games"
 
 Maintanability Badge:
-<a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
+[![Maintainability](https://api.codeclimate.com/v1/badges/5913552ae9db46fa801c/maintainability)](https://codeclimate.com/github/ANnick2908/python-project-lvl1/maintainability)
 
 Test Coverage Badge:
-<a href="https://codeclimate.com/github/codeclimate/codeclimate/test_coverage"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage" /></a>
+[![Test Coverage](https://api.codeclimate.com/v1/badges/5913552ae9db46fa801c/test_coverage)](https://codeclimate.com/github/ANnick2908/python-project-lvl1/test_coverage)
 
 Travis CI Status:
 [![Build Status](https://travis-ci.com/ANnick2908/python-project-lvl1.svg?branch=master)](https://travis-ci.com/ANnick2908/python-project-lvl1)
