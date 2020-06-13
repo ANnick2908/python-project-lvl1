@@ -7,7 +7,25 @@ from brain_games.games.brain_games import greeting
 ROUNDS = 3
 
 
-def logic(instruction, generator, check):
+def give_correct_answer(check, question):
+    """Give correct answer on the question.
+
+    Args:
+        check: check-function.
+        question: question.
+
+    Returns:
+        correct_answer: correct_answer on the question.
+
+    """
+    if isinstance(check(question), bool):
+        correct_answer = 'yes' if check(question) else 'no'
+    else:
+        correct_answer = check(question)
+    return correct_answer
+
+
+def logic(instruction, generator, check):  # noqa: WPS210
     """Start the game-process.
 
     Args:
@@ -25,10 +43,7 @@ def logic(instruction, generator, check):
         question = questions[amount - 1]
         print('Question: {q}'.format(q=question))
         answer = prompt.string('Your answer: ')
-        if type(check(question)) == bool:
-            correct_answer = 'yes' if check(question) else 'no'
-        else:
-            correct_answer = check(question)
+        correct_answer = give_correct_answer(check, question)
         if answer == correct_answer:
             print('Correct!')
             amount += 1

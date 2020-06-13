@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ANnick2908_brain_games"
-version = "0.7.4"
+version = "0.7.5"
 description = "The set of programm with simple math games"
 authors = ["ANnick2908 <annick2908@gmail.com>"]
 repository = "https://github.com/ANnick2908/python-project-lvl1"
